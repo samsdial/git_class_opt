@@ -240,17 +240,17 @@ de tal modo que siempre tengamos control para retomar, para editar, para resetea
 Para controlar el trabajo con las ramas disponemos diferentes comandos que nos proporciona git para gestionar todo el flujo de trabajo dentro de un projecto:
  
  - Git branch
-    Listado de las ramas actuales
+    Listado de las ramas actuales.
  - Git branch [NombreRama]
-    Crear una nueva rama con el nombre indicado
+    Crear una nueva rama con el nombre indicado.
  - Git checkout [nombreRama]
-    Cambiamos el estado a esa rama en contreto para trabajar en ella, por lo tanto permite ir moviendonos entre ramas
+    Cambiamos el estado a esa rama en contreto para trabajar en ella, por lo tanto permite ir moviendonos entre ramas.
     git checkout -b [nombreRama]
-        Crea la rama y nos posiciona dentro de ella
+        Crea la rama y nos posiciona dentro de ella.
  - Git merge [rama]
     fuciona dos ramas en una sola
  - Git branch -d[nombreRama]
-    Borrar una rama en concreto
+    Borrar una rama en concreto.
 
 ### Merge en Git
 
