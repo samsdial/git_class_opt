@@ -221,7 +221,7 @@ HEAD es el numero de refencia denominado checksum, es un numero que se forma por
 
 ### Ramas con Git o Branches
 
-Trabajar con las ramas en un proyecto es una de las cosas más importantes que nos vamos a encotrar en GIT, cuando hablamos de BRANCHING o trabajo con ramas, significa que iniciamos con la rama principal el master, apartir de hay podemos seguir trabajando sin seguir esa rama principal.
+Trabajar con las ramas en un proyecto es una de las cosas más importantes que nos vamos a encotrar en **GIT, cuando hablamos de BRANCHING o trabajo con ramas, significa que iniciamos con la rama principal el master, apartir de hay podemos seguir trabajando sin seguir esa rama principal.
 
 En muchos sistemas de control de versiones este proceso es muy costoso pues a menudo significa una copia del codigo.
 La forma en que git maneja las ramifcaciones es rapido y sencillo, algo casi instantaneo al igual que el avance y el retorceso entre distintas ramas, lo cual es tremendamente rapido, con git disponenmos de una herramienta que nos permite fucionar de una manera muy sencilla,
@@ -229,9 +229,10 @@ para su uso la forma habitual de trabajo con las ramas es que siempre deberiamos
 Al crear una nueva rama nos permite clonar una rama master y aplicar los cambios en esa rama clonada solo cuando nuestro desarrollo este perfectamente podemos fucionar la rama que estemos probando con la rama master, lo que conseguiremos con esto es que siempre estemos seguros de guardar el proyecto
 en perfectas condiciones.
 
-Que es una Rama?
+####Que es una Rama?
+
 Git no almacena los datos de forma incremental, guardando solo las diferencias de uno u otro archivo si no que los almacena como snapshot, realiza una captura de los archivos completos tal y como se encuentran en esos momentos generamos un punto de control por cada commit lo que llamamos el HEAD por cada punto de control,
-de tal manera que si tenemos diferentes archivos en diferentes ramas guardara en el mismo momento tantos HEADS como necesitemos para retomar nuestro trabajo en el punto donde lo hayamos dejado, simplemente apuntara a ese estado, a ese momento de trabajo que guradamos con el commit, en otras palabras por cada commit git guardara un HEAD independiente de cada
+de tal manera que si tenemos diferentes archivos en diferentes ramas guardara en el mismo momento tantos **HEADS como necesitemos para retomar nuestro trabajo en el punto donde lo hayamos dejado, simplemente apuntara a ese estado, a ese momento de trabajo que guradamos con el commit, en otras palabras por cada commit git guardara un HEAD independiente de cada
 rama en donde nos econtremos, estos nos permitira recumperar ese momento concreto de nuestra historia en el repositorio podemos disponer de tantas ramas como sean necesarias
 de tal modo que siempre tengamos control para retomar, para editar, para resetear, para eliminar.
 
@@ -239,17 +240,17 @@ de tal modo que siempre tengamos control para retomar, para editar, para resetea
 
 Para controlar el trabajo con las ramas disponemos diferentes comandos que nos proporciona git para gestionar todo el flujo de trabajo dentro de un projecto:
  
- - Git branch
+ - **Git branch
     Listado de las ramas actuales.
- - Git branch [NombreRama]
+ - **Git branch [NombreRama]
     Crear una nueva rama con el nombre indicado.
- - Git checkout [nombreRama]
+ - **Git checkout [nombreRama]
     Cambiamos el estado a esa rama en contreto para trabajar en ella, por lo tanto permite ir moviendonos entre ramas.
     git checkout -b [nombreRama]
         Crea la rama y nos posiciona dentro de ella.
- - Git merge [rama]
+ - **Git merge [rama]
     fuciona dos ramas en una sola
- - Git branch -d[nombreRama]
+ - **Git branch -d[nombreRama]
     Borrar una rama en concreto.
 
 ### Merge en Git
