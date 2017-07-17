@@ -102,41 +102,39 @@ Git log nos muestra la siguiente información:
 - Date
 
 Nos muestra los 3 (editable) commits anteriores.
-
-'''sh
+```sh
     git log -n 3
-'''
+```
 
 Nos muestra un resumen en una linea
 
-'''sh
+```sh
     git log --oneline
-'''
+```
 Nos muestra que archivos han cambiado y el numero relativo de lineas que se han añadido.
-'''sh
+```sh
     git log --stat
-'''
+```
 
 Nos muestra los commits por autor
-'''sh
+```sh
     git log --author="name"
-'''
+```
 Nos muestra los datos de la rama
-'''sh
+```sh
     git log --decorarte
-'''
+```
 
 ### Git diff
 
 Cuando editamos o incluimos se efectuan cambios, en caso de no estar muy seguros podemos pedirle a gif si se ha modificado los archivos de nuestro repositorio con el comando git diff
-
-'''sh
+```sh
     git diff
-'''
+```
  Al igual podemos ver las diferencias en el stage area antes de hacer commit con el comando
- '''sh
+```sh
     git diff -staged
- '''
+ ```
 
  ### Git rm
 
@@ -146,15 +144,15 @@ Para borrar un archivo de mi repositorio locar y remoto, debo ejecutar el comand
 
 Renombrar archivos desde git, ejecutamos el comando git mv + nombre + nombre y luego un git commit para confirmar el cambio
 
-'''sh
+```sh
     git mv nombre.html nuevo.html
-'''
+```
 
 Aunque no solo se trata de cambiar el nombre sino también de moverlo dentro de un directorio o viceversa
 
-'''sh
+```sh
     git mv nuevo.html carpeta/
-'''
+```
 
 ### Git reset
 
@@ -167,46 +165,46 @@ Atravez de todos los cambios de nuestro repositorio, podemos enteder como funcio
 
 EJERCICIO:
 Tenemos un documento llamado archivo.html su contenido es:
-'''sh
+```sh
 Primera línea
 
 (Agregamos) Segunda línea
-'''
+```
 luego por comando
-'''sh
+```sh
     git status
-'''
+```
 El cual nos muestra el cambio efectuado en la segunda línea si ejecutamos el comando (importante los espacios entre checkout)
-'''sh
+```sh
     git checkout -- archivo.html
-'''
+```
 Regresaremos en el tiempo borrando la segunda linea dejando el archivo así
 
-'''sh
+```sh
 Primera línea
 
-'''
+```
 Agregamos un commit con los ajuestes del local para el repo
-'''sh
+```sh
     git commit -m "Cambios del archivo.html"
-'''
+```
 Nueva mente hacemos ajustes en el archivo.hmlt agragando la línea como en el paso uno y hacemos un git add . + git status
-'''sh
+```sh
     git add .
     git status
-'''
+```
 Este nos mostrara un estado del stage area con el ajuste en verde pero nos pregunta que antes de hacer el commit podemos hacer un git reset HEAD y desacer los cambios antes del commit
-'''sh
+```sh
     git reset HEAD archivo.html
-'''
+```
 Es decir que hemos dado un paso hacia atras, literalmente a sacado los archivos del stage area y al hacer un git status nos muestra el que el archivo a sido modificado y que si queremos hacer un git add .  o un git checkout (y borrar los cambios recientes).
 Fin Ejemplo
 
 Si es el caso de regresar en el tiempo en un commit debemos hacer ejecutar el siguiente comando 
-'''sh
+```sh
     git log --oneline
     git reset --hart c95b07
-'''
+```
 
 --hart (retorna a el commit borrando definitivamente todos los posteriores )
 --soft (retorna el commit al stading index )
@@ -239,4 +237,21 @@ de tal modo que siempre tengamos control para retomar, para editar, para resetea
 
 ### Comandos del branching
 
-Para controlar el trabajo con las ramas disponemos diferentes comandos que nos proporciona git para gestionar todo el flujo de trabajo
+Para controlar el trabajo con las ramas disponemos diferentes comandos que nos proporciona git para gestionar todo el flujo de trabajo dentro de un projecto:
+ 
+ - Git branch
+    Listado de las ramas actuales
+ - Git branch [NombreRama]
+    Crear una nueva rama con el nombre indicado
+ - Git checkout [nombreRama]
+    Cambiamos el estado a esa rama en contreto para trabajar en ella, por lo tanto permite ir moviendonos entre ramas
+    git checkout -b [nombreRama]
+        Crea la rama y nos posiciona dentro de ella
+ - Git merge [rama]
+    fuciona dos ramas en una sola
+ - Git branch -d[nombreRama]
+    Borrar una rama en concreto
+
+### Merge en Git
+
+Controlar la fusión de ramas y las herramientas visuales para facilitar su uso.
