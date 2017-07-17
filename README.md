@@ -206,9 +206,9 @@ Si es el caso de regresar en el tiempo en un commit debemos hacer ejecutar el si
     git reset --hart c95b07
 ```
 
---hart (retorna a el commit borrando definitivamente todos los posteriores )
---soft (retorna el commit al stading index )
---misage (retorna todos en local)
+- --hart (retorna a el commit borrando definitivamente todos los posteriores )
+- --soft (retorna el commit al stading index )
+- --misage (retorna todos en local)
 
 ### HEAD en Git
 
