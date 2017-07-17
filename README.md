@@ -156,14 +156,14 @@ Aunque no solo se trata de cambiar el nombre sino también de moverlo dentro de 
 
 ### Git reset
 
-REVOCANDO CAMBIOS
+**REVOCANDO CAMBIOS**
 Atravez de todos los cambios de nuestro repositorio, podemos enteder como funciona git internatemente un archivo puede estar en tres sitios:
 
 - Working directory.
 - Stating index.
 - Git directory (Repository).
 
-EJERCICIO:
+**EJERCICIO:**
 Tenemos un documento llamado archivo.html su contenido es:
 ```sh
 Primera línea
@@ -212,16 +212,16 @@ Si es el caso de regresar en el tiempo en un commit debemos hacer ejecutar el si
 
 ### HEAD en Git
 
-Como sabe git donde estamos que es lo que tiene, el que y donde lo tiene, el HEAD es donde apunta el trabajo en ese momento dependiendo de la rama donde estemos trabajado,
+Como sabe git donde estamos que es lo que tiene, el que y donde lo tiene, el **HEAD** es donde apunta el trabajo en ese momento dependiendo de la rama donde estemos trabajado,
 git guarda esa posción.
 
-Todo proyecyo de git en su carpeta HEAD es gurado con un numero de encriptación como referencia.
+Todo proyecyo de git en su carpeta **HEAD** es gurado con un numero de encriptación como referencia.
 
-HEAD es el numero de refencia denominado checksum, es un numero que se forma por la toma de datos de alimentación atravez de un algoritmo que es la suma de la comprobación, SHAA algorimo de encriptación
+**HEAD** es el numero de refencia denominado checksum, es un numero que se forma por la toma de datos de alimentación atravez de un algoritmo que es la suma de la comprobación, SHAA algorimo de encriptación
 
 ### Ramas con Git o Branches
 
-Trabajar con las ramas en un proyecto es una de las cosas más importantes que nos vamos a encotrar en **GIT, cuando hablamos de BRANCHING o trabajo con ramas, significa que iniciamos con la rama principal el master, apartir de hay podemos seguir trabajando sin seguir esa rama principal.
+Trabajar con las ramas en un proyecto es una de las cosas más importantes que nos vamos a encotrar en **GIT**, cuando hablamos de BRANCHING o trabajo con ramas, significa que iniciamos con la rama principal el master, apartir de hay podemos seguir trabajando sin seguir esa rama principal.
 
 En muchos sistemas de control de versiones este proceso es muy costoso pues a menudo significa una copia del codigo.
 La forma en que git maneja las ramifcaciones es rapido y sencillo, algo casi instantaneo al igual que el avance y el retorceso entre distintas ramas, lo cual es tremendamente rapido, con git disponenmos de una herramienta que nos permite fucionar de una manera muy sencilla,
@@ -240,17 +240,17 @@ de tal modo que siempre tengamos control para retomar, para editar, para resetea
 
 Para controlar el trabajo con las ramas disponemos diferentes comandos que nos proporciona git para gestionar todo el flujo de trabajo dentro de un projecto:
  
- - **Git branch
+ - **Git branch**
     Listado de las ramas actuales.
- - **Git branch [NombreRama]
+ - **Git branch [NombreRama]**
     Crear una nueva rama con el nombre indicado.
- - **Git checkout [nombreRama]
+ - **Git checkout [nombreRama]**
     Cambiamos el estado a esa rama en contreto para trabajar en ella, por lo tanto permite ir moviendonos entre ramas.
-    git checkout -b [nombreRama]
+    **git checkout -b [nombreRama]**
         Crea la rama y nos posiciona dentro de ella.
- - **Git merge [rama]
+ - **Git merge [rama]**
     fuciona dos ramas en una sola
- - **Git branch -d[nombreRama]
+ - **Git branch -d[nombreRama]**
     Borrar una rama en concreto.
 
 ### Merge en Git
