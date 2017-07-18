@@ -193,7 +193,7 @@ Nueva mente hacemos ajustes en el archivo.hmlt agragando la línea como en el pa
     git add .
     git status
 ```
-Este nos mostrara un estado del stage area con el ajuste en verde pero nos pregunta que antes de hacer el commit podemos hacer un git reset HEAD y desacer los cambios antes del commit
+Este nos mostrara un estado del stage area con el ajuste en verde pero nos pregunta que antes de hacer el commit podemos hacer un git reset HEAD y deshacer los cambios antes del commit
 ```sh
     git reset HEAD archivo.html
 ```
@@ -221,7 +221,7 @@ Todo proyecyo de git en su carpeta **HEAD** es gurado con un numero de encriptac
 
 ### Ramas con Git o Branches
 
-Trabajar con las ramas en un proyecto es una de las cosas más importantes que nos vamos a encotrar en **GIT**, cuando hablamos de BRANCHING o trabajo con ramas, significa que iniciamos con la rama principal el master, apartir de hay podemos seguir trabajando sin seguir esa rama principal.
+Trabajar con las ramas en un proyecto es una de las cosas más importantes que nos vamos a encotrar en **GIT**, cuando hablamos de **BRANCHING** o trabajo con ramas, significa que iniciamos con la rama principal el master, apartir de hay podemos seguir trabajando sin seguir esa rama principal.
 
 En muchos sistemas de control de versiones este proceso es muy costoso pues a menudo significa una copia del codigo.
 La forma en que git maneja las ramifcaciones es rapido y sencillo, algo casi instantaneo al igual que el avance y el retorceso entre distintas ramas, lo cual es tremendamente rapido, con git disponenmos de una herramienta que nos permite fucionar de una manera muy sencilla,
@@ -229,10 +229,10 @@ para su uso la forma habitual de trabajo con las ramas es que siempre deberiamos
 Al crear una nueva rama nos permite clonar una rama master y aplicar los cambios en esa rama clonada solo cuando nuestro desarrollo este perfectamente podemos fucionar la rama que estemos probando con la rama master, lo que conseguiremos con esto es que siempre estemos seguros de guardar el proyecto
 en perfectas condiciones.
 
-####Que es una Rama?
+#### Que es una Rama?
 
 Git no almacena los datos de forma incremental, guardando solo las diferencias de uno u otro archivo si no que los almacena como snapshot, realiza una captura de los archivos completos tal y como se encuentran en esos momentos generamos un punto de control por cada commit lo que llamamos el HEAD por cada punto de control,
-de tal manera que si tenemos diferentes archivos en diferentes ramas guardara en el mismo momento tantos **HEADS como necesitemos para retomar nuestro trabajo en el punto donde lo hayamos dejado, simplemente apuntara a ese estado, a ese momento de trabajo que guradamos con el commit, en otras palabras por cada commit git guardara un HEAD independiente de cada
+de tal manera que si tenemos diferentes archivos en diferentes ramas guardara en el mismo momento tantos **HEADS** como necesitemos para retomar nuestro trabajo en el punto donde lo hayamos dejado, simplemente apuntara a ese estado, a ese momento de trabajo que guradamos con el commit, en otras palabras por cada commit git guardara un **HEAD** independiente de cada
 rama en donde nos econtremos, estos nos permitira recumperar ese momento concreto de nuestra historia en el repositorio podemos disponer de tantas ramas como sean necesarias
 de tal modo que siempre tengamos control para retomar, para editar, para resetear, para eliminar.
 
@@ -256,3 +256,41 @@ Para controlar el trabajo con las ramas disponemos diferentes comandos que nos p
 ### Merge en Git
 
 Controlar la fusión de ramas y las herramientas visuales para facilitar su uso.
+
+ - **Git merge [rama]**
+    fuciona dos ramas en una sola
+
+### Deshacer un Merge
+
+Deshacer un merge y volver a un commit, mucha atencion en los pasos que demos, si hacemos un merge de las dos ramas **Siempre debemos hacer un git status** y confirmar así que los todos los cambios se completaron bien, si necesitamos deshacer un merge debemos revisar cual fue el commit anterior a este y con el comando
+
+```sh
+    git reset --hard [noCommit]
+```
+
+### Remotos en Git
+
+**Git remote**
+Inicial mente y en su mayoria todos lo proyecto comienzan con git clone para copiar un repositorio en un servidor denomindado **remoto**, en un grupo de trabajo colaborativo al desarrollo. 
+
+El primer paso vamos a convertir nuestro proyecto este en un servidor remoto:
+- **git clone / git remote**
+    Herramienta para gestionar conexiones remotas, ese repositorio remoto sera una copia de nuestro proyecto con el siguente comando hacemos una copia de un repositorio en la nueve:
+    ```sh
+        git clone https://github.com/MyREPOENgithub
+    ```
+    luego podemos revisar con el comando:
+    ```sh
+        git remote
+        origin
+    ```
+    El cual nos habla de la conexion con el origen
+
+    Con el comando siguente comando:
+    ```sh
+        git remote -v
+    ```
+    Nos mostrara cuales son las direcciones del push y del fetch
+- **git push** 
+
+- **git fetch <=> git pull**
