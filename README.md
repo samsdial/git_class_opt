@@ -332,3 +332,39 @@ En otra rama
 ```sh
     git pull origin otraRama
 ```
+
+### Protocolos en Git
+
+Normalmente nos conectamos al repositorio atravez de una direccion http, pero exiten muchas otras posibilidades de utilizar conexiones con diferente protocolos dependiendo de nuestros intereses o gustos, los protocolos generales para usar repositorios son:
+
+- **Local** Es decir en local seria el basico podemos alejar nuestro servidor en nuestra maquina y que el resto de personas se conecten a nuestro ordenador.
+
+- **SSH** Hoy en día el más usado, ultimamente el mas estandarizado por diferentes razones, la principal  es la seguridad ya que todas las transferencias van a estar encriptadas y autentificadas, es capas de comprimir los datos para que resulte agil. Se requiere una configuración previa con los permisos necesiarios.
+
+- **GIT** Es muy similar al SSH, pero sin la encriptación ni la autentificación se puede usar de manera puntual para grandes proyectos, para disponer de un trafico muy amplio sin necesidad de la autentificación, requiere de una configuración especial y concreta que usa daemon (proceso que se utiliza en segundo plano sin que nosotros lo controlemos que se dedica a escuchar de manera activa atraves de un puerto concreto).
+
+- **HTTP/S** Generico y publico.
+
+### Git TAG
+
+Se suelen usar para identificar los avances en nuestro proyecto, para cada version publicada de un software o para cada parte concreta de nuestro historial del proyecto, podemos crear una nueva etiqueta para una nueva version de nuestro programa cuando la hacemos publica:
+
+Para agregar por consola agregamos:
+```sh
+    git tag v1.0
+```
+Se agrega con el ultimo commit
+
+Podemos ver mas información con el comando
+```sh
+    git show v1.0
+```
+Para agregar esta version al remoto por consola se ejecuta el comando
+```sh
+    git push origin master --tags
+```
+
+### Git bare
+
+Disponemos de este comando el --bare disponible con el git init / clone, esto significa que vamos a inicializar un nuevo repositorio de git vacio pero que con este comando va omitir el directorio de trabajo, lo usaremos cuando creemos los repositorios compartidos, siempre hay que crear los repositorios con la opcion --bare
+normalmente.
