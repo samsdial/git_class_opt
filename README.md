@@ -292,5 +292,31 @@ El primer paso vamos a convertir nuestro proyecto este en un servidor remoto:
     ```
     Nos mostrara cuales son las direcciones del push y del fetch
 - **git push** 
+    Luego de efectuar ajustes en local el origen de nuestro repo debe tener los utilmos cambio estos se van a efectuar en master para esto por consola efectuamos el siguiente comando:
+    ```sh
+        git status
+        git commit -m'prueba'
+        git push
+    ```
+    Esto efectuara los cambios en el repositorio de origen en la nuve.
 
+    Ahora si incluimos una rama a nuestro local:
+    ```sh
+        git checkout -b ramaNueva
+    ```
+    Automaticamente por el comando que insertamos nos posiciona en esta rama, para luego agregarla a nuesto remoto en la nuve debemos por consola agerar el siguiente comando:
+
+    ```sh
+        git push origin ramaNueva
+    ```
+    Si en algun momento decidimos que no necesitamos esa rama en remoto, la podemos eliminar con el siguente comando
+    ```sh
+        git push origin :ramaNueva
+    ```
+    **Importante** Aun la rama esta presente en locar si se desea borrar esta rama debemos estar en master y con el comando:
+    ```sh
+        git branch -d ramaNueva
+    ```
+    Eliminamos del el loca esta rama.
 - **git fetch <=> git pull**
+    El comando git fetch es utilizado para actualizar nuestro reposito desde el remoto, lo normal es que si estamos trabajando en un proyecto en conjunto con mas compañeros se vayan efectuando cambios en el repositorio centrar ya que cada cual ira actualizando con sus aportaciones para eso tenemos los comandos fetch y pull, para actualizar al repositorio central y otener la version actualizada de los archivos alojados, podemos utilizar git fetch origin, pero el mas estandarizado y que más vamos usar costantemente es el git pull ya que con este comando nos ahorariamos algunos pasos, ya que el se encarga de realizar el fetch mas el merge, es decir con el con el fetch deberiamos hacer dos pasos, mientras que con el pull esto lo deberia hacer de forma automatica.
