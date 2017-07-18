@@ -274,7 +274,7 @@ Deshacer un merge y volver a un commit, mucha atencion en los pasos que demos, s
 Inicial mente y en su mayoria todos lo proyecto comienzan con git clone para copiar un repositorio en un servidor denomindado **remoto**, en un grupo de trabajo colaborativo al desarrollo. 
 
 El primer paso vamos a convertir nuestro proyecto este en un servidor remoto:
-- **git clone / git remote**
+#### git clone / git remote
     Herramienta para gestionar conexiones remotas, ese repositorio remoto sera una copia de nuestro proyecto con el siguente comando hacemos una copia de un repositorio en la nueve:
     ```sh
         git clone https://github.com/MyREPOENgithub
@@ -291,7 +291,7 @@ El primer paso vamos a convertir nuestro proyecto este en un servidor remoto:
         git remote -v
     ```
     Nos mostrara cuales son las direcciones del push y del fetch
-- **git push** 
+#### git push 
     Luego de efectuar ajustes en local el origen de nuestro repo debe tener los utilmos cambio estos se van a efectuar en master para esto por consola efectuamos el siguiente comando:
     ```sh
         git status
@@ -318,5 +318,5 @@ El primer paso vamos a convertir nuestro proyecto este en un servidor remoto:
         git branch -d ramaNueva
     ```
     Eliminamos del el loca esta rama.
-- **git fetch <=> git pull**
+#### git fetch <=> git pull
     El comando git fetch es utilizado para actualizar nuestro reposito desde el remoto, lo normal es que si estamos trabajando en un proyecto en conjunto con mas compañeros se vayan efectuando cambios en el repositorio centrar ya que cada cual ira actualizando con sus aportaciones para eso tenemos los comandos fetch y pull, para actualizar al repositorio central y otener la version actualizada de los archivos alojados, podemos utilizar git fetch origin, pero el mas estandarizado y que más vamos usar costantemente es el git pull ya que con este comando nos ahorariamos algunos pasos, ya que el se encarga de realizar el fetch mas el merge, es decir con el con el fetch deberiamos hacer dos pasos, mientras que con el pull esto lo deberia hacer de forma automatica.
